@@ -25,7 +25,7 @@ export default function Board({ squares, xIsNext, onPlay, winner, winningLine })
   const isWinning = (i) => Array.isArray(winningLine) && winningLine.includes(i);
 
   return (
-    <div className="board" role="grid" aria-label="Tic Tac Toe Board">
+    <div className="board" role="grid" aria-label="Tic Tac Toe board">
       {squares.map((value, i) => (
         <Square
           key={i}

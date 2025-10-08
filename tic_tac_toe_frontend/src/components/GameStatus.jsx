@@ -24,6 +24,7 @@ export default function GameStatus({ xIsNext, winner, isDraw, winningLine }) {
       className={`status-banner ${tone} surface shadow-xs rounded`}
       role="status"
       aria-live="polite"
+      aria-atomic="true"
     >
       <span className="status-dot" aria-hidden="true" />
       <span>{message}</span>
