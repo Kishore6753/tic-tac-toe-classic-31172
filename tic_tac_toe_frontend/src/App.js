@@ -22,7 +22,6 @@ export default function App() {
   }, [theme]);
 
   const currentSquares = history[step];
-
   const result = useMemo(() => calculateResult(currentSquares), [currentSquares]);
 
   // PUBLIC_INTERFACE
@@ -51,10 +50,15 @@ export default function App() {
 
   return (
     <div className="app-root">
-      <nav className="topbar surface shadow-sm">
-        <div className="brand">
-          <span className="brand-dot" aria-hidden="true" />
-          <span className="brand-title">Tic-Tac-Toe</span>
+      <nav className="topbar surface shadow-top">
+        <div className="brand" aria-label="App title">
+          <span className="brand-title">
+            Tic
+            <span className="brand-accent" aria-hidden="true">-</span>
+            Tac
+            <span className="brand-dot" aria-hidden="true" />
+            Toe
+          </span>
         </div>
         <div className="actions">
           <button
@@ -68,7 +72,7 @@ export default function App() {
       </nav>
 
       <main className="container">
-        <section className="game-card surface shadow-md rounded">
+        <section className="game-card surface shadow-md rounded" aria-label="Game area">
           <header className="game-header">
             <h1 className="title">Ocean Professional</h1>
             <p className="subtitle">A clean, modern Tic-Tac-Toe experience</p>
